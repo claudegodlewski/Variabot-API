@@ -1,0 +1,1 @@
+Les scripts Bash stockent leurs résultats dans ce dossier.
