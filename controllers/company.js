@@ -97,3 +97,25 @@ exports.allurlsCompany = (req, res, next) => {
   res.status(200).json({message: 'Script des URLs exécuté.'})
 
 };
+
+// # Simulation de trafic # => En cours de développement (nouvelle version).
+exports.trafficCompany = (req, res, next) => {
+
+  console.log('Traffic.');
+
+  exec("cd bash && ./getCompany && ./trafficCompany", (error, stdout, stderr) => {
+
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+      console.log(`stdout: ${stdout}`);
+  });
+  
+  res.status(200).json({message: 'Script de simulation de trafic exécuté.'})
+
+};

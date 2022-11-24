@@ -38,5 +38,6 @@ app.use(express.json()); // Prend toutes les requêtes qui ont comme Content-Typ
 app.use('/api/auth', userRoutes); // Ajout des routes "user" après /api/auth.
 app.use('/api/data', companyRoutes); // Ajout des routes "company" après /api/data.
 app.use('/static', express.static(__dirname + '/output')); // Permet de lier le dossier "output" à /static.
+app.use('/poc', express.static(__dirname + '/poc')); // Permet de lier le dossier "images" à /images.
 
 module.exports = app;
