@@ -9,5 +9,6 @@ router.get('/getcompany', companyCtrl.getCompany); // Route de récupération de
 router.get('/endpointscompany', auth, companyCtrl.endpointsCompany); // Route de collecte des endpoints.
 router.get('/subdomainscompany', auth, companyCtrl.subdomainsCompany); // Route de collecte des sous-domaines.
 router.get('/allurlscompany', auth, companyCtrl.allurlsCompany); // Route de collecte des URLs.
+router.get('/trafficCompany', auth, companyCtrl.trafficCompany); // Route de simulation de trafic.
 
 module.exports = router;
